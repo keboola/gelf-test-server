@@ -1,9 +1,9 @@
-FROM node:6-wheezy
+FROM node:4
 
 EXPOSE 12201/udp
 
 COPY . /home/
 WORKDIR /home/
-RUN npm install -g graygelf
+RUN npm install graygelf
 
 ENTRYPOINT node /home/index.js
